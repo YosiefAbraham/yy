@@ -1,15 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
   imageUrl?: string;
-  demoUrl?: string;
-  githubUrl?: string;
+  onClick?: () => void;
 }
 
 export default function ProjectCard({
@@ -17,11 +14,14 @@ export default function ProjectCard({
   description,
   technologies,
   imageUrl,
-  demoUrl,
-  githubUrl,
+  onClick,
 }: ProjectCardProps) {
   return (
-    <Card className="overflow-hidden hover-elevate transition-all duration-300" data-testid={`card-project-${title.toLowerCase().replace(/\s/g, '-')}`}>
+    <Card 
+      className="overflow-hidden hover-elevate active-elevate-2 transition-all duration-300 cursor-pointer" 
+      onClick={onClick}
+      data-testid={`card-project-${title.toLowerCase().replace(/\s/g, '-')}`}
+    >
       <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center border-b border-card-border">
         {imageUrl ? (
           <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
@@ -47,19 +47,8 @@ export default function ProjectCard({
           ))}
         </div>
 
-        <div className="flex gap-3 pt-2">
-          {demoUrl && (
-            <Button variant="outline" size="sm" data-testid={`button-demo-${title.toLowerCase().replace(/\s/g, '-')}`}>
-              <ExternalLink className="h-4 w-4 mr-2" />
-              Live Demo
-            </Button>
-          )}
-          {githubUrl && (
-            <Button variant="ghost" size="sm" data-testid={`button-github-${title.toLowerCase().replace(/\s/g, '-')}`}>
-              <Github className="h-4 w-4 mr-2" />
-              Code
-            </Button>
-          )}
+        <div className="text-sm text-muted-foreground pt-2">
+          Click to view details →
         </div>
       </div>
     </Card>
