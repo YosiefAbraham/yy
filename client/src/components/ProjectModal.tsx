@@ -1,12 +1,13 @@
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, X } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 export interface ProjectDetail {
@@ -32,7 +33,7 @@ export default function ProjectModal({ project, open, onClose }: ProjectModalPro
   if (!project) return null;
 
   return (
-    <Dialog open={open} onOpenChange={onClose}>
+    <Dialog open={open} onOpenChange={(nextOpen) => { if (!nextOpen) onClose(); }}>
       <DialogContent className="max-w-4xl max-h-[90vh] p-0 gap-0">
         <DialogHeader className="px-6 pt-6 pb-4 border-b border-border">
           <div className="flex items-start justify-between gap-4">
@@ -40,9 +41,9 @@ export default function ProjectModal({ project, open, onClose }: ProjectModalPro
               <DialogTitle className="text-3xl font-bold" data-testid={`text-modal-title-${project.title.toLowerCase().replace(/\s/g, '-')}`}>
                 {project.title}
               </DialogTitle>
-              <p className="text-base text-muted-foreground" data-testid="text-modal-description">
+              <DialogDescription className="text-base text-muted-foreground" data-testid="text-modal-description">
                 {project.description}
-              </p>
+              </DialogDescription>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
                   <Badge key={tech} variant="secondary" className="text-xs">
@@ -55,15 +56,19 @@ export default function ProjectModal({ project, open, onClose }: ProjectModalPro
 
           <div className="flex gap-3 pt-4">
             {project.demoUrl && (
-              <Button variant="default" size="sm" data-testid="button-modal-demo">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Live Demo
+              <Button variant="default" size="sm" asChild data-testid="button-modal-demo">
+                <a href={project.demoUrl} target="_blank" rel="noreferrer">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Live Demo
+                </a>
               </Button>
             )}
             {project.githubUrl && (
-              <Button variant="outline" size="sm" data-testid="button-modal-github">
-                <Github className="h-4 w-4 mr-2" />
-                View Code
+              <Button variant="outline" size="sm" asChild data-testid="button-modal-github">
+                <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                  <Github className="h-4 w-4 mr-2" />
+                  View Code
+                </a>
               </Button>
             )}
           </div>
