@@ -14,6 +14,7 @@ export interface ProjectDetail {
   title: string;
   description: string;
   technologies: string[];
+  category?: string;
   demoUrl?: string;
   githubUrl?: string;
   longDescription?: string;

@@ -10,6 +10,7 @@ export default function ProjectsSection() {
   const projects: ProjectDetail[] = [
     {
       title: "FGScholar",
+      category: "SWE",
       description: "A full-stack React Native + Firebase platform enabling first-generation students to track college applications, manage essays, and connect with editors.",
       technologies: ["React Native", "Firebase", "Google Drive API", "TypeScript", "Real-time Chat"],
       demoUrl: "https://example.com",
@@ -32,6 +33,7 @@ export default function ProjectsSection() {
     },
     {
       title: "BeWell",
+      category: "School",
       description: "CS 247B productivity app utilizing React Native and JavaScript to facilitate dynamic data generation and enhance user experience.",
       technologies: ["React Native", "JavaScript", "Real-time Analytics", "User Management"],
       demoUrl: "https://example.com",
@@ -54,6 +56,7 @@ export default function ProjectsSection() {
     },
     {
       title: "Generate",
+      category: "School",
       description: "CS 147L mobile app development project built with React Native, featuring dynamic data generation and customizable user settings.",
       technologies: ["React Native", "JavaScript", "Mobile Development", "Data Analytics"],
       githubUrl: "https://github.com",
@@ -75,6 +78,7 @@ export default function ProjectsSection() {
     },
     {
       title: "Class Project 1",
+      category: "School",
       description: "Details coming soon - This project will showcase advanced computer science concepts and practical applications.",
       technologies: ["To be updated"],
       longDescription:
@@ -90,6 +94,7 @@ export default function ProjectsSection() {
     },
     {
       title: "Class Project 2",
+      category: "School",
       description: "Details coming soon - This project will showcase advanced computer science concepts and practical applications.",
       technologies: ["To be updated"],
       longDescription:
@@ -105,6 +110,7 @@ export default function ProjectsSection() {
     },
     {
       title: "Class Project 3",
+      category: "School",
       description: "Details coming soon - This project will showcase advanced computer science concepts and practical applications.",
       technologies: ["To be updated"],
       longDescription:
@@ -120,6 +126,7 @@ export default function ProjectsSection() {
     },
     {
       title: "Class Project 4",
+      category: "School",
       description: "Details coming soon - This project will showcase advanced computer science concepts and practical applications.",
       technologies: ["To be updated"],
       longDescription:
@@ -135,6 +142,7 @@ export default function ProjectsSection() {
     },
     {
       title: "Class Project 5",
+      category: "School",
       description: "Details coming soon - This project will showcase advanced computer science concepts and practical applications.",
       technologies: ["To be updated"],
       longDescription:
@@ -176,6 +184,7 @@ export default function ProjectsSection() {
               title={project.title}
               description={project.description}
               technologies={project.technologies}
+              category={project.category}
               onClick={() => handleProjectClick(project)}
             />
           ))}

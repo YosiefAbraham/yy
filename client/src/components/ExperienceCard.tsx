@@ -7,7 +7,9 @@ interface ExperienceCardProps {
   period: string;
   description: string;
   technologies: string[];
+  category?: string;
   logo?: string;
+  onClick?: () => void;
 }
 
 export default function ExperienceCard({
@@ -16,10 +18,28 @@ export default function ExperienceCard({
   period,
   description,
   technologies,
+  category,
   logo,
+  onClick,
 }: ExperienceCardProps) {
   return (
-    <Card className="p-6 md:p-8 hover-elevate transition-all duration-300" data-testid={`card-experience-${company.toLowerCase().replace(/\s/g, '-')}`}>
+    <Card 
+      className="p-6 md:p-8 hover-elevate active-elevate-2 transition-all duration-300 cursor-pointer relative" 
+      onClick={onClick}
+      data-testid={`card-experience-${company.toLowerCase().replace(/\s/g, '-')}`}
+    >
+      {category && (
+        <div className="absolute top-0 right-0 z-10">
+          <Badge 
+            variant="secondary" 
+            className="rounded-none rounded-bl-lg bg-primary/90 text-primary-foreground backdrop-blur-sm text-xs px-3 py-1 border-0"
+            data-testid={`badge-category-${category.toLowerCase().replace(/\s/g, '-')}`}
+          >
+            {category}
+          </Badge>
+        </div>
+      )}
+      
       <div className="space-y-4">
         {logo && (
           <div className="h-12 flex items-center">
@@ -50,6 +70,10 @@ export default function ExperienceCard({
               {tech}
             </Badge>
           ))}
+        </div>
+
+        <div className="text-sm text-muted-foreground pt-2">
+          Click to view details →
         </div>
       </div>
     </Card>
