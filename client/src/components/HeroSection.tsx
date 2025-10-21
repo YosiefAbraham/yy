@@ -16,7 +16,7 @@ export default function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none" data-testid="text-hero-name">
-                Your Name
+                Yosief Abraham
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground" data-testid="text-hero-tagline">
                 Full Stack Developer crafting exceptional digital experiences
