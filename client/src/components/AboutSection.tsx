@@ -95,7 +95,19 @@ export default function AboutSection() {
           <div className="flex justify-center md:justify-end animate-slide-in-right">
             <div className="w-full max-w-md">
               <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 border border-primary/20 overflow-hidden shadow-2xl hover-lift animate-float">
-                <div className="w-full h-full flex items-center justify-center relative">
+                {/* Profile image */}
+                <img 
+                  src="/images/yosief-profile.jpg" 
+                  alt="Yosief Abraham" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback to initials if image fails to load
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextElementSibling.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback initials - hidden by default */}
+                <div className="w-full h-full flex items-center justify-center relative hidden">
                   {/* Enhanced decorative elements */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
                   <div className="absolute top-6 right-6 w-12 h-12 bg-white/20 rounded-full blur-sm"></div>
