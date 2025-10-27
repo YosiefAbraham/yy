@@ -11,7 +11,7 @@ export default function ProjectsSection() {
     {
       title: "FGScholar",
       category: "SWE",
-      description: "A full-stack React Native + Firebase platform enabling first-generation students to track college applications, manage essays, and connect with editors.",
+      description: "Full-stack platform helping first-generation students track college applications and manage essays with real-time collaboration.",
       technologies: ["React Native", "Firebase", "Google Drive API", "TypeScript", "Real-time Chat"],
       demoUrl: "https://example.com",
       githubUrl: "https://github.com",
@@ -34,7 +34,7 @@ export default function ProjectsSection() {
     {
       title: "BeWell",
       category: "School",
-      description: "CS 247B productivity app utilizing React Native and JavaScript to facilitate dynamic data generation and enhance user experience.",
+      description: "Student productivity app with dynamic data generation and real-time analytics for personalized user experience.",
       technologies: ["React Native", "JavaScript", "Real-time Analytics", "User Management"],
       demoUrl: "https://example.com",
       githubUrl: "https://github.com",
@@ -57,7 +57,7 @@ export default function ProjectsSection() {
     {
       title: "Generate",
       category: "School",
-      description: "CS 147L mobile app development project built with React Native, featuring dynamic data generation and customizable user settings.",
+      description: "Mobile app development project featuring dynamic data generation and customizable user settings.",
       technologies: ["React Native", "JavaScript", "Mobile Development", "Data Analytics"],
       githubUrl: "https://github.com",
       longDescription:
@@ -174,7 +174,7 @@ export default function ProjectsSection() {
         <SectionHeader
           number="2"
           title="Featured Projects"
-          subtitle="Showcasing innovative solutions and technical excellence"
+          subtitle="Technical projects and mobile applications"
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

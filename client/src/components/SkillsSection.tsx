@@ -32,7 +32,7 @@ export default function SkillsSection() {
         <SectionHeader
           number="3"
           title="Skills & Expertise"
-          subtitle="A comprehensive toolkit spanning engineering, development, and business"
+          subtitle="Technical expertise and professional skills"
         />
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">

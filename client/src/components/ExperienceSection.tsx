@@ -13,7 +13,7 @@ export default function ExperienceSection() {
       role: "Growth Product Manager",
       period: "August 2025 - Present",
       category: "PM",
-      description: "Analyzed user feedback and bugs; translated issues into reproducible test cases, and recommended technical fixes and UI optimizations. Led usability testing and outreach on Stanford's campus, leveraging A/B-style experiments to evaluate user flows and drive product adoption.",
+      description: "Led product optimization through user research and A/B testing. Translated user feedback into actionable product improvements.",
       technologies: ["Product Management", "A/B Testing", "User Research", "UI/UX"],
       companyUrl: "https://oasiz.ai",
       longDescription:
@@ -38,7 +38,7 @@ export default function ExperienceSection() {
       role: "Venture Capitalist Senior Scout",
       period: "September 2024 - Present",
       category: "VC",
-      description: "Conducted comprehensive market analyses and due diligence on emerging AI technologies, synthesizing insights to inform strategic investment decisions. Produced 4+ comprehensive investment pitches biweekly, incorporating risk analyses and partnership strategies.",
+      description: "Conducted market analysis and due diligence on AI technologies. Produced investment pitches and strategic recommendations.",
       technologies: ["Market Analysis", "Due Diligence", "AI Technologies", "Investment Strategy"],
       companyUrl: "https://collidecapital.com",
       longDescription:
@@ -63,7 +63,7 @@ export default function ExperienceSection() {
       role: "Fixed Income Sales and Trading Summer Analyst",
       period: "June 2025 - August 2025",
       category: "Finance",
-      description: "Conducted in-depth market analysis for Credit, Municipal, and Securitized Product Group desks, synthesizing insights from 50+ primers and director meetings, resulting in 5+ actionable trade recommendations. Crafted and delivered highly technical trade pitch proposals bi-weekly.",
+      description: "Analyzed credit, municipal, and securitized products. Delivered technical trade recommendations and market insights.",
       technologies: ["Financial Analysis", "Trading", "Market Research", "Credit Products"],
       companyUrl: "https://www.morganstanley.com",
       longDescription:
@@ -88,7 +88,7 @@ export default function ExperienceSection() {
       role: "Lead Engineer Researcher",
       period: "June 2024 - November 2024",
       category: "Civil Engineering",
-      description: "Spearheaded a cross-functional research project on public transit issues for Seamless Bay Area, impacting over 8 million commuters. Leveraged Python and Excel to process tens of millions of data points on vehicle and population movement, using AI to drive unique analytics.",
+      description: "Led cross-functional research on public transit issues impacting 8M+ commuters. Used Python and AI to analyze millions of data points.",
       technologies: ["Python", "Excel", "Data Analysis", "AI", "Public Transit"],
       companyUrl: "https://engineering.stanford.edu",
       longDescription:
@@ -160,7 +160,7 @@ export default function ExperienceSection() {
         <SectionHeader
           number="1"
           title="Experience"
-          subtitle="Building innovative solutions across diverse industries and technologies"
+          subtitle="Professional experience across tech, finance, and research"
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

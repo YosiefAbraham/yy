@@ -16,7 +16,7 @@ export default function AboutSection() {
           <SectionHeader
             number="4"
             title="About Me"
-            subtitle="Building at the intersection of technology, finance, and social impact"
+            subtitle="Building at the intersection of tech, finance, and impact"
           />
         </div>
 
@@ -42,29 +42,24 @@ export default function AboutSection() {
 
             <div className="space-y-6 text-base md:text-lg leading-relaxed">
               <p data-testid="text-about-p1" className="animate-slide-up" style={{animationDelay: '0.1s'}}>
-                I'm a Product Manager and Software Engineer at Stanford University, pursuing dual degrees in 
-                <span className="text-primary font-medium"> Civil Engineering (BS)</span> and 
-                <span className="text-primary font-medium"> Computer Science (MS)</span>. With experience spanning product management, 
-                venture capital, and trading at Morgan Stanley, I bring a unique perspective to building 
-                technology solutions.
+                Stanford dual-degree student in 
+                <span className="text-primary font-medium"> Civil Engineering</span> and 
+                <span className="text-primary font-medium"> Computer Science</span>. 
+                Experience in product management, venture capital, and trading at Morgan Stanley.
               </p>
 
               <p data-testid="text-about-p2" className="animate-slide-up" style={{animationDelay: '0.2s'}}>
-                My technical expertise includes full-stack development with 
+                Full-stack developer specializing in 
                 <span className="text-primary font-medium"> React Native</span>, 
                 <span className="text-primary font-medium"> TypeScript</span>, and 
-                <span className="text-primary font-medium"> Firebase</span>, 
-                alongside strong analytical skills in Python and data processing. I'm passionate about creating 
-                products that drive social innovation and solve real-world problems, from helping first-generation 
-                students navigate college applications to improving public transit for millions of commuters.
+                <span className="text-primary font-medium"> Python</span>. 
+                Passionate about building products that drive social innovation and solve real-world problems.
               </p>
 
               <p data-testid="text-about-p3" className="animate-slide-up" style={{animationDelay: '0.3s'}}>
-                Beyond coding, I'm actively involved in leadership roles at Stanford, including serving as a 
-                <span className="text-primary font-medium"> Residential Assistant</span> and co-founding 
-                <span className="text-primary font-medium"> Stanford Black Rhythm and Sound</span>. I'm interested in 
-                entrepreneurship, financial markets, infrastructure development, and I'm an avid Arsenal FC supporter 
-                and travel enthusiast.
+                Stanford Residential Assistant and co-founder of 
+                <span className="text-primary font-medium"> Black Rhythm and Sound</span>. 
+                Interested in entrepreneurship, financial markets, and Arsenal FC.
               </p>
             </div>
 

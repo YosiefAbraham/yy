@@ -33,11 +33,11 @@ export default function HeroSection() {
                 <span className="text-foreground">Abraham</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed" data-testid="text-hero-tagline">
-                Product Manager & Software Engineer building innovative solutions at the intersection of 
-                <span className="text-primary font-medium"> technology</span>, 
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed" data-testid="text-hero-tagline">
+                Building innovative solutions at the intersection of 
+                <span className="text-primary font-medium"> tech</span>, 
                 <span className="text-primary font-medium"> finance</span>, and 
-                <span className="text-primary font-medium"> social impact</span>
+                <span className="text-primary font-medium"> impact</span>
               </p>
             </div>
 
