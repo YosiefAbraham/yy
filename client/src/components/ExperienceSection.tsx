@@ -4,7 +4,8 @@ import ExperienceCard from "./ExperienceCard";
 import ExperienceModal, { ExperienceDetail } from "./ExperienceModal";
 
 export default function ExperienceSection() {
-  const [selectedExperience, setSelectedExperience] = useState<ExperienceDetail | null>(null);
+  const [selectedExperience, setSelectedExperience] =
+    useState<ExperienceDetail | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
 
   const experiences: ExperienceDetail[] = [
@@ -13,8 +14,14 @@ export default function ExperienceSection() {
       role: "Growth Product Manager",
       period: "August 2025 - Present",
       category: "PM",
-      description: "Led product optimization through user research and A/B testing. Translated user feedback into actionable product improvements.",
-      technologies: ["Product Management", "A/B Testing", "User Research", "UI/UX"],
+      description:
+        "Led product optimization through user research and A/B testing. Translated user feedback into actionable product improvements.",
+      technologies: [
+        "Product Management",
+        "A/B Testing",
+        "User Research",
+        "UI/UX",
+      ],
       companyUrl: "https://oasiz.ai",
       longDescription:
         "As a Growth Product Manager at Oasiz.Ai, I bridge the gap between users and the engineering team by analyzing feedback, conducting usability testing, and optimizing product flows. My work directly impacts user adoption and product quality through data-driven decision making.",
@@ -38,8 +45,14 @@ export default function ExperienceSection() {
       role: "Venture Capitalist Senior Scout",
       period: "September 2024 - Present",
       category: "VC",
-      description: "Conducted market analysis and due diligence on AI technologies. Produced investment pitches and strategic recommendations.",
-      technologies: ["Market Analysis", "Due Diligence", "AI Technologies", "Investment Strategy"],
+      description:
+        "Conducted market analysis and due diligence on AI technologies. Produced investment pitches and strategic recommendations.",
+      technologies: [
+        "Market Analysis",
+        "Due Diligence",
+        "AI Technologies",
+        "Investment Strategy",
+      ],
       companyUrl: "https://collidecapital.com",
       longDescription:
         "As a Senior Scout at Collide Capital, I identify promising investment opportunities in the AI and technology sectors. My role involves conducting deep market analyses, performing due diligence on startups, and crafting compelling investment pitches for the partnership.",
@@ -63,12 +76,18 @@ export default function ExperienceSection() {
       role: "Fixed Income Sales and Trading Summer Analyst",
       period: "June 2025 - August 2025",
       category: "Finance",
-      description: "Priced bonds, developed hedging strategies, and built financial models for commercial real estate lending and mortgage calculations.",
-      technologies: ["Bond Pricing", "Hedging Strategies", "Financial Modeling", "Commercial Real Estate"],
+      description:
+        "Priced bonds, developed hedging strategies, and built financial models for commercial real estate lending and mortgage calculations.",
+      technologies: [
+        "Bond Pricing",
+        "Hedging Strategies",
+        "Financial Modeling",
+        "Commercial Real Estate",
+      ],
       companyUrl: "https://www.morganstanley.com",
       longDescription:
-        "During my summer at Morgan Stanley's Fixed Income division, I focused on bond pricing, hedging strategies, and financial modeling. I worked on commercial real estate lending projects, built mortgage calculators, and developed models to calculate pricing and hedging positions for various financial instruments.",
-      images: ["ms-1.jpg", "ms-2.jpg", "ms-3.jpg"],
+        "During my summer at Morgan Stanley's Fixed Income division, I focused on bond pricing, hedging strategies, and financial modeling. I worked on commercial real estate lending projects, built mortgage calculators, and developed models to calculate pricing and hedging positions for various financial instruments.\n\nNote: Due to NDA purposes, we did not film or keep any work from the summer, which is why there are no images available.",
+      images: [],
       responsibilities: [
         "Priced bonds and calculated optimal hedging strategies for trading positions",
         "Developed financial models to calculate pricing and hedging positions",
@@ -89,8 +108,15 @@ export default function ExperienceSection() {
       role: "Lead Engineer Researcher",
       period: "June 2024 - November 2024",
       category: "Civil Engineering",
-      description: "Led cross-functional research on public transit issues impacting 8M+ commuters. Used Python and AI to analyze millions of data points.",
-      technologies: ["Python", "Excel", "Data Analysis", "AI", "Public Transit"],
+      description:
+        "Led cross-functional research on public transit issues impacting 8M+ commuters. Used Python and AI to analyze millions of data points.",
+      technologies: [
+        "Python",
+        "Excel",
+        "Data Analysis",
+        "AI",
+        "Public Transit",
+      ],
       companyUrl: "https://engineering.stanford.edu",
       longDescription:
         "Led a critical research initiative examining public transit inefficiencies in the San Francisco Bay Area. This cross-functional project combined civil engineering principles with advanced data analytics to identify solutions that could improve transportation for millions of daily commuters.",
@@ -114,7 +140,8 @@ export default function ExperienceSection() {
       role: "Role Title",
       period: "TBD",
       category: "TBD",
-      description: "Details coming soon - This experience will showcase professional growth and contributions in a specific domain.",
+      description:
+        "Details coming soon - This experience will showcase professional growth and contributions in a specific domain.",
       technologies: ["To be updated"],
       longDescription:
         "This experience placeholder is reserved for future professional experiences. Details will be added as new opportunities arise.",
@@ -131,7 +158,8 @@ export default function ExperienceSection() {
       role: "Role Title",
       period: "TBD",
       category: "TBD",
-      description: "Details coming soon - This experience will showcase professional growth and contributions in a specific domain.",
+      description:
+        "Details coming soon - This experience will showcase professional growth and contributions in a specific domain.",
       technologies: ["To be updated"],
       longDescription:
         "This experience placeholder is reserved for future professional experiences. Details will be added as new opportunities arise.",
@@ -166,15 +194,19 @@ export default function ExperienceSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {experiences.map((exp) => (
-            <ExperienceCard 
-              key={exp.company} 
-              {...exp} 
+            <ExperienceCard
+              key={exp.company}
+              {...exp}
               onClick={() => handleExperienceClick(exp)}
             />
           ))}
         </div>
 
-        <ExperienceModal experience={selectedExperience} open={modalOpen} onClose={handleCloseModal} />
+        <ExperienceModal
+          experience={selectedExperience}
+          open={modalOpen}
+          onClose={handleCloseModal}
+        />
       </div>
     </section>
   );
