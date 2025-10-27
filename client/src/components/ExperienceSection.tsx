@@ -86,7 +86,7 @@ export default function ExperienceSection() {
       ],
       companyUrl: "https://www.morganstanley.com",
       longDescription:
-        "During my summer at Morgan Stanley's Fixed Income division, I focused on bond pricing, hedging strategies, and financial modeling. I worked on commercial real estate lending projects, built mortgage calculators, and developed models to calculate pricing and hedging positions for various financial instruments.\n\nNote: Due to NDA purposes, we did not film or keep any work from the summer, which is why there are no images available.",
+        "During my summer at Morgan Stanley's Fixed Income division, I focused on bond pricing, hedging strategies, and financial modeling. I worked on commercial real estate lending projects, built mortgage calculators, and developed models to calculate pricing and hedging positions for various financial instruments.\n\n\nNote: Due to NDA purposes, we did not film or keep any work from the summer, which is why there are no images available.",
       images: [],
       responsibilities: [
         "Priced bonds and calculated optimal hedging strategies for trading positions",
