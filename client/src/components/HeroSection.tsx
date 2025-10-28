@@ -150,6 +150,10 @@ export default function HeroSection() {
                           <div className="text-xs text-muted-foreground">
                             {highlight.impact}
                           </div>
+                          {/* DEBUG: Show current index */}
+                          <div className="text-xs text-red-500 font-bold">
+                            DEBUG: {index} | Current: {currentHighlight}
+                          </div>
                         </div>
                       </div>
                     </div>
