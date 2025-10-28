@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 
 export default function HeroSection() {
   const [currentHighlight, setCurrentHighlight] = useState(0);
-  
+
   const highlights = [
     {
       role: "Growth PM",
@@ -46,16 +46,21 @@ export default function HeroSection() {
   ];
 
   useEffect(() => {
-    // Force carousel to start rotating immediately
-    const interval = setInterval(() => {
-      setCurrentHighlight((prev) => {
-        const next = (prev + 1) % highlights.length;
-        return next;
-      });
-    }, 2500);
+    // Start the carousel immediately
+    const startCarousel = () => {
+      const interval = setInterval(() => {
+        setCurrentHighlight((prev) => {
+          const next = (prev + 1) % highlights.length;
+          console.log(`Carousel: ${prev} -> ${next}`);
+          return next;
+        });
+      }, 2500);
+      return interval;
+    };
 
+    const interval = startCarousel();
     return () => clearInterval(interval);
-  }, [highlights.length]);
+  }, []); // Empty dependency array - run once on mount
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
