@@ -46,11 +46,19 @@ export default function HeroSection() {
   ];
 
   useEffect(() => {
+    console.log('Setting up carousel interval');
     const interval = setInterval(() => {
-      setCurrentHighlight((prev) => (prev + 1) % highlights.length);
+      setCurrentHighlight((prev) => {
+        const next = (prev + 1) % highlights.length;
+        console.log('Carousel rotating from', prev, 'to', next);
+        return next;
+      });
     }, 2500); // Auto-rotate every 2.5 seconds
 
-    return () => clearInterval(interval);
+    return () => {
+      console.log('Clearing carousel interval');
+      clearInterval(interval);
+    };
   }, []);
 
   const scrollToSection = (id: string) => {
