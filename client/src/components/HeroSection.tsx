@@ -51,7 +51,6 @@ export default function HeroSection() {
       const interval = setInterval(() => {
         setCurrentHighlight((prev) => {
           const next = (prev + 1) % highlights.length;
-          console.log(`Carousel: ${prev} -> ${next}`);
           return next;
         });
       }, 2500);
@@ -150,10 +149,6 @@ export default function HeroSection() {
                           <div className="text-xs text-muted-foreground">
                             {highlight.impact}
                           </div>
-                          {/* DEBUG: Show current index */}
-                          <div className="text-xs text-red-500 font-bold">
-                            DEBUG: {index} | Current: {currentHighlight}
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -166,7 +161,7 @@ export default function HeroSection() {
                     <button
                       key={index}
                       onClick={() => setCurrentHighlight(index)}
-                      className={`h-1.5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] transform-gpu ${
+                      className={`h-1.5 rounded-full transition-all duration-500 ease-out transform-gpu ${
                         index === currentHighlight
                           ? "bg-primary w-6 shadow-md"
                           : "bg-muted-foreground/30 w-1.5 hover:bg-muted-foreground/60 hover:w-2"
@@ -277,7 +272,10 @@ export default function HeroSection() {
                   onError={(e) => {
                     // Fallback to initials if image fails to load
                     e.currentTarget.style.display = "none";
-                    e.currentTarget.nextElementSibling.style.display = "flex";
+                    const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (nextElement) {
+                      nextElement.style.display = "flex";
+                    }
                   }}
                 />
                 {/* Fallback initials - hidden by default */}
